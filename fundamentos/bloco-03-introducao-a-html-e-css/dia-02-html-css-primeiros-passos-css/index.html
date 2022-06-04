@@ -5,17 +5,43 @@
         <title>CSS Básico</title>
         <style>
 
+            body {
+                font-size: 16px;
+            }
+
             h1 {
+                font-family: sans-serif;
                 font-size: 65px;
                 color: orange;
+                text-decoration: dashed;
             }
 
             ul {
                 background-color: #f5c;
+                text-align: center;
+                line-height: 1.2;
+                font-style: oblique;
+            }
+
+            p {
+                font-weight: 600;
+                font-size: 3em;
             }
 
             .color-modifier {
                 color: purple;
+            }
+
+            #amarelo {
+                background-color: yellow;
+            }
+
+            #vermelho {
+                background-color: red;
+            }
+
+            #rosa {
+                background-color: pink;
             }
 
         </style>
@@ -25,9 +51,9 @@
         <h1>Exercício 3.2</h1>
         <p class="color-modifier">Qual a sua cor favorita?</p>
         <ul class="color-modifier">
-            <li>Amarelo</li>
-            <li>Vermelho</li>
-            <li>Rosa</li>
+            <li id="amarelo">Amarelo</li>
+            <li id="vermelho">Vermelho</li>
+            <li id="rosa">Rosa</li>
         </ul>
     </body>
 </html>

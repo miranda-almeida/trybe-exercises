@@ -1,0 +1,69 @@
+
+/*EXERCÍCIO 1*/
+
+ol li {
+    background-color: yellow;
+}
+
+ol li.par {
+    color: rgb(3, 200, 3);
+}
+
+ol li.impar{
+    text-transform: uppercase;
+}
+
+/*EXERCÍCIO 2*/
+
+h1, h3 {
+    color: red;
+}
+
+h1 em, h3 em {
+    font-size: 40px;
+    border: 1px solid black;
+}
+
+/*EXERCÍCIO 3*/
+
+li {
+    font-size: 20px;
+}
+
+li em {
+    font-weight: bold;
+}
+
+/*EXERCÍCIO 4*/
+
+.java-keyword {
+    background-color: #f5c;
+}
+
+.first-3 {
+    color: blue;
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+.stack {
+    color: orangered;
+}
+
+.w3s {
+    color: green;
+}
+
+.mdn {
+    color: black;
+}
+
+.dd {
+    color: yellow;
+}
+
+.trybe {
+    color: greenyellow;
+}

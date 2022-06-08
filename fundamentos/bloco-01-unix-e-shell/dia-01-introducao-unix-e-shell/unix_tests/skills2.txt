@@ -1,8 +1,0 @@
-Internet
-Unix
-Bash
-Front-end
-Python
-Ruby
-Github
-CSS

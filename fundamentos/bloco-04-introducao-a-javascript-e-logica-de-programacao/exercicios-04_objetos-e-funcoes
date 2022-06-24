@@ -1,0 +1,279 @@
+// OBJETOS
+
+// Crie um objeto player contendo as variáveis listadas abaixo.
+let player = {
+  name: "Marta",
+  lastName: "Silva",
+  age: 34,
+  medals: {
+    golden: 2,
+    silver: 3,
+  },
+  bestInTheWorld: [2006, 2007, 2008, 2009, 2010, 2018],
+};
+
+// Acesse as chaves name, lastName e age e concatene as suas informações para imprimir no console uma mensagem no seguinte formato: "A jogadora Marta Silva tem 34 anos de idade".
+console.log(
+  "A jogadora " +
+    player.name +
+    " " +
+    player.lastName +
+    " tem " +
+    player.age +
+    " anos de idade."
+);
+
+// Adicione ao objeto a chave bestInTheWorld e atribua a esta chave um array contendo as datas em que a jogadora Marta foi considerada a melhor do mundo.
+
+// Acesse a chave bestInTheWorld e faça um console.log no seguinte formato: "A jogadora Marta Silva foi eleita a melhor do mundo por 6 vezes".
+
+console.log(
+  "A jogadora " +
+    player.name +
+    " " +
+    player.lastName +
+    " foi eleita a melhor do mundo por " +
+    player.bestInTheWorld.length +
+    " vezes."
+);
+
+// Acesse a chave medals e faça um console.log no seguinte formato: "A jogadora possui 2 medalhas de ouro e 3 medalhas de prata".
+
+console.log(
+  "A jogadora porssui " +
+    player.medals.golden +
+    " medalhas de ouro e " +
+    player.medals.silver +
+    " medalhas de prata."
+);
+
+// FOR IN E FOR OF
+
+// Usando o objeto abaixo, utilize for/in e imprima no console a mensagem 'Olá xxxxx' para cada nome, substituindo o xxxxx pelo nome em questão.
+
+let names = {
+  person1: "João",
+  person2: "Maria",
+  person3: "Jorge",
+};
+
+for (index in names) {
+  console.log("Olá " + names[index]);
+}
+
+// Usando o objeto abaixo, utilize for/in e imprima um console.log com as chaves e valores desse objeto.
+
+let car = {
+  model: "A3 Sedan",
+  manufacturer: "Audi",
+  year: 2020,
+};
+
+for (position in car) {
+  console.log(position, car[position]);
+}
+
+// FUNÇÕES
+
+// refatorar códigos dos exercícios da parte 4.1: https://app.betrybe.com/course/fundamentals/introducao-a-javascript-e-logica-de-programacao/javascript-primeiros-passos/33d74e1e-05b9-4ce8-86e3-623c96afe64d/o-que-vamos-aprender/1e4c006e-9395-4c18-8c13-b1998eef4aa6?use_case=redirect
+
+// OBJETOS E FOR/IN
+
+//  Usando o objeto abaixo, faça os exercícios a seguir:
+
+let info = {
+  personagem: "Margarida",
+  origem: "Pato Donald",
+  nota: "Namorada do personagem principal nos quadrinhos do Pato Donald",
+};
+
+// 1) imprima no console uma mensagem de boas-vindas para a personagem acima, incluindo seu nome. Valor esperado no console: Bem-vinda, Margarida
+
+console.log("Boas vindas, " + info.personagem);
+
+// 2) insira no objeto uma nova propriedade com o nome de chave 'recorrente' e o valor 'Sim' e, em seguida, imprima o objeto no console. // FEEDBACK: O valor esperado no console deveria ser "Sim", mas está exibindo o código com a chave e valor inseridos.
+
+let info = {
+  personagem: "Margarida",
+  origem: "Pato Donald",
+  nota: "Namorada do personagem principal nos quadrinhos do Pato Donald",
+  recorrente: "Sim",
+};
+
+console.log(info.recorrente);
+
+// 3) faça um for/in que mostre todas as chaves do objeto. Valor esperado no console: personagem origem nota recorrente
+
+let info = {
+  personagem: "Margarida",
+  origem: "Pato Donald",
+  nota: "Namorada do personagem principal nos quadrinhos do Pato Donald",
+  recorrente: "Sim",
+};
+
+for (chaves in info) {
+  console.log(chaves);
+}
+
+// 4) faça um novo for/in, mas agora mostre todos os valores das chaves do objeto. Valor esperado no console: Margarida Pato Donald Namorada do personagem principal nos quadrinhos do Pato Donald Sim
+
+let info = {
+  personagem: "Margarida",
+  origem: "Pato Donald",
+  nota: "Namorada do personagem principal nos quadrinhos do Pato Donald",
+  recorrente: "Sim",
+};
+
+for (chaves in info) {
+  console.log(info[chaves]);
+}
+
+// 5) Agora, defina um segundo objeto com a mesma estrutura (as mesmas chaves) do primeiro e os seguintes valores: 'Tio Patinhas', 'Christmas on Bear Mountain, Dell's Four Color Comics #178', 'O último MacPatinhas', 'Sim'. Então, imprima os valores de cada objeto juntos de acordo com cada uma das chaves. Valor esperado no console:
+
+let info = {
+  personagem: "Margarida",
+  origem: "Pato Donald",
+  nota: "Namorada do personagem principal nos quadrinhos do Pato Donald",
+  recorrente: "Sim",
+};
+
+let infoDois = {
+  personagem: "Tio Patinhas",
+  origem: "Christmas on Bear Mountain",
+  nota: "O último MacPatinhas",
+  recorrente: "Sim",
+};
+
+console.log(info.personagem + " e " + infoDois.personagem);
+console.log(info.origem + " e " + infoDois.origem);
+console.log(info.nota + " e " + infoDois.nota);
+
+if (info.recorrente === infoDois.recorrente) {
+  console.log("Ambos recorrentes");
+}
+
+//  Usando o objeto abaixo, faça os exercícios a seguir:
+
+let leitor = {
+  nome: "Julia",
+  sobrenome: "Pessoa",
+  idade: 21,
+  livrosFavoritos: [
+    {
+      titulo: "O Pior Dia de Todos",
+      autor: "Daniela Kopsch",
+      editora: "Tordesilhas",
+    },
+  ],
+};
+
+// 🚀  6) acesse as chaves nome, sobrenome e titulo, que está dentro da chave livrosFavoritos, e faça um console.log no seguinte formato: "O livro favorito de Julia Pessoa se chama 'O Pior Dia de Todos'".
+
+let primeiroLivro = leitor.livrosFavoritos[0];
+
+console.log(
+  "O livro favorito de " +
+    leitor.nome +
+    " " +
+    leitor.sobrenome +
+    " se chama " +
+    primeiroLivro["titulo"] +
+    "."
+);
+
+// 🚀  7) adicione um novo livro favorito na chave livrosFavoritos, que é um array. Atribua a esta chave um objeto contendo as seguintes informações:
+
+// {
+//     titulo: 'Harry Potter e o Prisioneiro de Azkaban',
+//     autor: 'JK Rowling',
+//     editora: 'Rocco',
+// }
+
+let leitor = {
+  nome: "Julia",
+  sobrenome: "Pessoa",
+  idade: 21,
+  livrosFavoritos: [
+    {
+      titulo: "O Pior Dia de Todos",
+      autor: "Daniela Kopsch",
+      editora: "Tordesilhas",
+    },
+    {
+      titulo: "etc",
+      autor: "etc",
+      editora: "etc",
+    },
+  ],
+};
+
+// 🚀  8) acesse as chaves nome e livrosFavoritos e faça um console.log no seguinte formato: "Julia tem 2 livros favoritos".
+
+console.log(
+  leitor.nome + " tem " + leitor.livrosFavoritos.length + " livros favoritos."
+);
+
+// FUNÇÕES
+
+// 1) Crie uma função que receba uma string e retorne true se for um palíndromo, ou false, se não for.
+// REFATORAR PARA OUTRAS SOLUÇÕES, POPULAR EM ENTREVISTAS.
+
+function verifyPalindrome(word) {
+    let characters = word.split('');
+    let reversed = characters.reverse().join('');
+        return (characters === reversed);
+
+}
+
+console.log(verifyPalindrome('trybe'));
+
+// function findPalindrome(string) {
+//     let cleanChar = string.replace(/[^A-Z0-9]/ig, "").toLowerCase();
+//     let reversedChar = cleanChar.split('').reverse().join('');
+// return (cleanChar === reversedChar)
+// }
+
+function palindromo(palavra) {
+     let minuscula = string.toLowerCase();
+     let invertida = minuscula.split('').reverse().join('');
+        return (minuscula === invertida);
+}
+
+console.log(palidromo('trybe'));
+
+//  2) crie uma função que receba um array de inteiros e retorne o índice do maior valor. Array de teste: [2, 3, 6, 7, 10, 1];. Valor esperado no retorno da função: 4.
+
+let numeros = [2, 3, 6, 7, 10, 1];
+
+function retornaIndiceMaior(array) {
+    for (index = 0; index < numeros.length; index += 1) {
+        let maiorNumero = Math.max.apply(null, numeros);
+        if(numeros[index] === maiorNumero) {
+            return maiorNumero[index];
+        }
+    }
+}
+
+console.log(retornaIndiceMaior(numeros));
+
+// 3) Crie uma função que receba um array de inteiros e retorne o índice do menor valor. Array de teste: [2, 4, 6, 7, 10, 0, -3];. Valor esperado no retorno da função: 6.
+
+// 4) Crie uma função que receba um array de nomes e retorne o nome com a maior quantidade de caracteres. Array de teste: ['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana'];. Valor esperado no retorno da função: Fernanda.
+
+// 5)  🚀 5 - Crie uma função que receba um array de inteiros e retorne o inteiro que mais se repete. Array de teste: [2, 3, 2, 5, 8, 2, 3];. Valor esperado no retorno da função: 2.
+
+let array = [2, 3, 2, 5, 8, 2, 3];
+
+// 6) Crie uma função que receba um número natural (número inteiro não negativo) N e retorne o somatório de todos os números de 1 até N. Valor de teste: N = 5. Valor esperado no retorno da função: 1+2+3+4+5 = 15.
+
+// 7) crie uma função que receba uma string word e outra string ending. Verifique se a string ending é o final da string word. Considere que a string ending sempre será menor que a string word. 
+//      Valor de teste: 'trybe' e 'be'
+//     Valor esperado no retorno da função: true
+//     verificaFimPalavra('trybe', 'be');
+//     Retorno esperado: true
+//     verificaFimPalavra('joaofernando', 'fernan');
+//     Retorno esperado: false
+
+
+
+

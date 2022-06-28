@@ -28,3 +28,5 @@ let subtitleEdit = document.getElementsByTagName('h4');
 for (index = 0; index < subtitleEdit.length; index += 1) {
     subtitleEdit[index].style.color = 'blueviolet';
 }
+
+// -------------------------------------------------------------------------------------------------------------------- QUERY SELECTOR E QUERY SELECTOR ALL

@@ -77,15 +77,9 @@ substituteX = (nome) => {
   const phrase = `Tryber x aqui`;
   let phraseCatch = phrase;
   phraseCatch = phrase.replace(/[x]/g, `${nome}`);
-
-  returnSkills = (phraseCatch) => {
-    const skills = ['JavaScript', 'HTML', 'CSS'];
-    return `${phraseCatch} Minhas três principais habilidades são: ${skills}`;
-  };
-
-  return returnSkills();
+  return phraseCatch;
 }
-console.log(substituteX());
+
 
 // console.log(substituteX('Miranda'));
 
@@ -103,3 +97,20 @@ EXEMPLO DE RETORNO
       - HTML
       - CSS
 */
+
+substituteX = (nome) => {
+  const phrase = `Tryber x aqui`;
+  let phraseCatch = phrase;
+  phraseCatch = phrase.replace(/[x]/g, `${nome}`);
+  return phraseCatch;
+}
+
+let functionOne = substituteX('Miranda');
+
+returnSkills = (functionOne) => {
+  console.log(functionOne);
+  const skills = ['JavaScript', 'HTML', 'CSS'];
+  return `Minhas três principais habilidades são: ${skills}`;
+}
+
+console.log(returnSkills(functionOne));

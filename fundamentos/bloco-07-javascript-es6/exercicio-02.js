@@ -75,7 +75,7 @@ const orderModifier = (order) => {
   const pepperoni = Object.keys(order.order.pizza)[1];
   const coca = Object.values(order.order.drinks.coke)[0];
   return `Olá ${cliente}, o total do seu pedido de ${marguerita}, ${pepperoni} e ${coca}, é R$ ${pagamento},00.`;
-};
+}
 
 console.log(orderModifier(order));
 

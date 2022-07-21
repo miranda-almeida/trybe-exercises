@@ -1,22 +1,17 @@
-const newEmployees = (name) => {
+const newEmployees = (callback) => {
   const employees = {
-    id1: `${name}, ${employeeEmailInfo(name)}@tryber.com`, // 'Pedro Guerra',
-    id2: `nome`, // Luiza Drumond',
-    id3: `nome`, // 'Carla Paiva',
+    id1: callback('Pedro Guerra'),
+    id2: callback('Luiza Drumond'),
+    id3: callback('Carla Paiva'),
   };
   return employees;
 };
 
 const employeeEmailInfo = (name) => {
-  const loweredName = name.toLowerCase();
-  const underline = loweredName.replace(' ', '_');
-  return `${underline}`;
-  // return `${underline}@trybe.com`;
+  const loweredName = name.toLowerCase().replace(' ', '_');
+  return {nome: name, email: `${loweredName}@tryber.com`};
 }
 
-// const employeeName = (name) => {
-//   return `${name}`;
-// }
 
-console.log(newEmployees(employeeEmailInfo('Pedro Guerra')));
+console.log(newEmployees(employeeEmailInfo));
 
